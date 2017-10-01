@@ -32,7 +32,6 @@ body {
 }
 #header a:hover {
     color: #D72020;
-
     text-decoration: underline;
     cursor: pointer;
 
@@ -45,8 +44,6 @@ body {
     height: 100%;
     position: absolute;
 }
- 
-
 
 #aboutUs {
     background: #1e2226;
@@ -96,7 +93,7 @@ body {
     height: 24%;
     padding-top: 0px;
 }
-#fourthPage {
+#forthPage {
     background: #002;
     margin: auto auto;
     width: 80%;
