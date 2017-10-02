@@ -29,6 +29,7 @@
                 </div>
             </div>
             <div id="firstPage"> 
+                <img src="images/firstPage.png" width="100%" opacity =".6" >
                 <h2>Основной контент страницы</h2>
             </div>
             <div id="secondPage">

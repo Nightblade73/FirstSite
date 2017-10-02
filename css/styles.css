@@ -70,16 +70,18 @@ body {
 }
 
 #firstPage {
-    background: #001;
+    /*background-image: url(http://localhost/images/firstPage.png);*/
+    background: #000;
     margin: auto auto;
     width: 80%;
+    
     height: 24%;
     padding-top: 0px;
     margin-top: 80px;
 }
 
 #secondPage {
-    background: #002;
+    background: #000;
     margin: auto auto;
     width: 80%;
     height: 24%;
@@ -87,14 +89,14 @@ body {
 }
 
 #thirdPage {
-    background: #002;
+    background: #000;
     margin: auto auto;
     width: 80%;
     height: 24%;
     padding-top: 0px;
 }
 #forthPage {
-    background: #002;
+    background: #000;
     margin: auto auto;
     width: 80%;
     height: 24%;
