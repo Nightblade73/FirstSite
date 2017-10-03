@@ -91,7 +91,7 @@ body {
 }
 
 #secondPage {
-    background-image: url(http://localhost/images/firstPage.png);
+    background-image: url(http://localhost/images/secondPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,7 +109,10 @@ body {
     padding-top: 0px;
 }
 #forthPage {
-    background: #000;
+    background-image: url(http://localhost/images/forthPage.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto auto;
     width: 80%;
     height: 24%;
