@@ -3,8 +3,8 @@ body {
     background: #FFF;
     color: #FFF;
     margin: 0px;
-    font-family: Tahoma, sans-serif;
-    font-size: 20px;
+    font-family: Myriad Pro, semibold;
+    font-size: 35px;
 }
 
 #container {
@@ -25,16 +25,19 @@ body {
 
 }
 #header a {
-    margin-left: 180px;
-    margin-right:  180px;
     color: #FFF;
     text-decoration: none;
+    text-align: center;
+    line-height: 250%;
+    background: #1e2226;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
 }
 #header a:hover {
-    color: #D72020;
-    text-decoration: underline;
     cursor: pointer;
-
+    background: #323940;
 }
 
 #main {
@@ -69,19 +72,29 @@ body {
     position: absolute;
 }
 
-#firstPage {
-    /*background-image: url(http://localhost/images/firstPage.png);*/
-    background: #000;
+#firstPage {    
+    background-image: url(http://localhost/images/firstPage.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto auto;
     width: 80%;
-    
     height: 24%;
     padding-top: 0px;
     margin-top: 80px;
 }
+#firstPage img{
+    width: 100%;
+}
+#firstPage a{
+    margin: auto auto;
+}
 
 #secondPage {
-    background: #000;
+    background-image: url(http://localhost/images/firstPage.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto auto;
     width: 80%;
     height: 24%;
