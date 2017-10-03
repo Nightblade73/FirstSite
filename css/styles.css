@@ -73,7 +73,7 @@ body {
 }
 
 #firstPage {    
-    background-image: url(http://localhost/images/firstPage.png);
+    background-image: url(../images/firstPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -86,12 +86,22 @@ body {
 #firstPage img{
     width: 100%;
 }
-#firstPage a{
-    margin: auto auto;
+#logo {
+    text-align: center;
+    padding-top: 25%;
+    padding-left: 0%;
+    font-family: Mistral;
+    font-size: 100px;
+    text-shadow:
+			-3px -3px 0 #000,
+			3px -3px 0 #000,
+			-3px 3px 0 #000,
+			3px 3px 0 #000;
+    margin: auto;
 }
 
 #secondPage {
-    background-image: url(http://localhost/images/secondPage.png);
+    background-image: url(../images/secondPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,6 +109,20 @@ body {
     width: 80%;
     height: 24%;
     padding-top: 0px;
+}
+#description {
+    overflow: hidden;
+    line-height: 1;
+    padding-top: 12%;
+    padding-left: 3%;
+    text-align: left;
+    font-size: 28px;
+    text-indent: 60px;
+}
+
+#video {
+    padding-top: 13%;
+    float: left;
 }
 
 #thirdPage {
@@ -109,7 +133,7 @@ body {
     padding-top: 0px;
 }
 #forthPage {
-    background-image: url(http://localhost/images/forthPage.png);
+    background-image: url(../images/forthPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
