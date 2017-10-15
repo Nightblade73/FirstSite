@@ -5,14 +5,16 @@ body {
     margin: 0px;
     font-family: Myriad Pro, semibold;
     font-size: 35px;
+    
 }
 
 #container {
     background: #000;
     text-align: center;
     width: 100%;
-    height: 4500px;
+    height: 5480px;
     position: absolute;
+    min-width: 2100px;
 }
 
 #header {
@@ -22,7 +24,13 @@ body {
     text-align: center;
     cursor: auto;
     position: fixed;
-
+    min-width: 2100px;
+}
+#header div {
+    background: #1e2226;
+    width: 16%;
+    height: 100%;
+    position: absolute;
 }
 #header a {
     color: #FFF;
@@ -41,49 +49,37 @@ body {
 }
 
 #main {
-    background: #1e2226;
-    width: 20%;
     margin-left: 10%;
-    height: 100%;
-    position: absolute;
 }
 
 #aboutUs {
-    background: #1e2226;
-    width: 20%;
-    margin-left: 30%;
-    height: 100%;
-    position: absolute;
+    margin-left: 26%;
 }
 
 #examples {
-    background: #1e2226;
-    width: 20%;
-    margin-left: 50%;
-    height: 100%;
-    position: absolute;
+    margin-left: 42%;
+}
+
+#order {
+    margin-left: 58%;
 }
 
 #contacts {
-    background: #1e2226;
-    width: 20%;
-    margin-left: 70%;
-    height: 100%;
-    position: absolute;
+    margin-left: 74%;
 }
 
-#firstPage {    
+#mainPage {    
     background-image: url(../images/firstPage.png);
     background-color: #000;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin: auto auto;
     width: 80%;
-    height: 24%;
+    height: 20%;
     padding-top: 0px;
     margin-top: 80px;
 }
-#firstPage img{
+#mainPage img{
     width: 100%;
 }
 #logo {
@@ -100,14 +96,14 @@ body {
     margin: auto;
 }
 
-#secondPage {
+#aboutCompany {
     background-image: url(../images/secondPage.png);
     background-color: #000;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin: auto auto;
     width: 80%;
-    height: 24%;
+    height: 20%;
     padding-top: 0px;
 }
 #description {
@@ -125,21 +121,32 @@ body {
     float: left;
 }
 
-#thirdPage {
+#moreExamples {
     background: #000;
     margin: auto auto;
     width: 80%;
-    height: 24%;
+    height: 20%;
     padding-top: 0px;
 }
-#forthPage {
+#doSale {
+    /*background-image: url(../images/forthPage.png);*/
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto auto;
+    width: 80%;
+    height: 20%;
+    padding-top: 0px;
+}
+
+#contactsCompany {
     background-image: url(../images/forthPage.png);
     background-color: #000;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin: auto auto;
     width: 80%;
-    height: 24%;
+    height: 20%;
     padding-top: 0px;
 }
 
