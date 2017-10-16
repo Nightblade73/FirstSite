@@ -1,0 +1,55 @@
+.gif-with-play {
+  background: url('../img/loading.gif') transparent no-repeat;
+}
+ 
+.gif-with-play:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+ 
+.gif-with-play{
+  clear: both;
+  opacity: .9;
+  height: 500px;
+  width: 500px;
+  background-size: contain;
+}
+
+ 
+/*.play.gif-with-play:hover {
+  opacity: .9;
+}*/
+
+/* 
+.gif-with-play:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,.7);
+  z-index: 10;
+  -webkit-transition: all  ease;
+  -o-transition: all  ease;
+  transition: all  ease;
+}
+ 
+.play.gif-with-play:before {
+  background-color: rgba(255,255,255,0);
+}
+ */
+/*.gif-with-play img {
+  -webkit-transition: all  ease;
+  -o-transition: all  ease;
+  transition: all  ease;
+}*/
+ 
+ 
+/*@media screen and (max-width: 768px) {
+  .gif-with-play:after,
+  .play.gif-with-play:after {
+    height: 60px;
+    width: 60px;
+  }
+}*/
