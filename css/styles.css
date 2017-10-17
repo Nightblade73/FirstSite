@@ -5,7 +5,7 @@ body {
     margin: 0px;
     font-family: Myriad Pro, semibold;
     font-size: 35px; 
-    
+
 }
 
 #container {
@@ -89,10 +89,10 @@ body {
     font-family: Mistral;
     font-size: 100px;
     text-shadow:
-			-3px -3px 0 #000,
-			3px -3px 0 #000,
-			-3px 3px 0 #000,
-			3px 3px 0 #000;
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000;
     margin: auto;
 }
 
@@ -156,21 +156,41 @@ body {
     width: 100%;
     position: absolute;
     clear: both;
+    min-width: 1920px;
 }
 #person{
+
+}
+.textbox[name="Person"] {
+    margin-top: 25px;
+}
+.textbox[name="Address"] {
+    margin-top: 80px;
+}
+.textbox{
     position: inherit;
     height: 30px;
-    width: 100px;
+    width: 500px;
     left: 10%;
-    top: 21%;
+    top: 0;
+    font-size: 24px;
     margin-left: 15%;
 }
-#address{
-    display: none;
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button[name="Send"]{
     position: absolute;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 15%;
+    top: 56px;
 }
 
 #contactsCompany {

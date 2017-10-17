@@ -44,10 +44,10 @@
                 <a>Сделать заказ</a>
                 <form>
                     <p>Введите свое имя : </p>
-                    <input type="text" name="Person" id="person"/>
-                    <p>Введите адрес : </p>
-                    <input type="text" name="Address" id="address"/> 
-                    <input type="submit" value="Отправить" />
+                    <input type="text" name="Person" class="textbox"/>
+                    <p>Введите свой e-mail : </p>
+                    <input type="text" name="Address" class="textbox"/> 
+                    <button class="button" name="Send">Отправить</button>
                 </form>
             </div>
             <div id="contactsCompany">
