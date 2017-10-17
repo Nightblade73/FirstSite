@@ -28,17 +28,33 @@
             <div id="moreExamples">
                 <a>Примеры работ</a>
                 <div class="gif-with-play">
-                    <img src="fireworks/1.jpg" alt="Self Portrait" data-srcgif="fireworks/1.gif">
+                    <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
                 </div>
                 <div class="gif-with-play">
-                    <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
+                    <img src="fireworks/6.jpg" alt="Self Portrait" data-srcgif="fireworks/6.gif">
+                </div>
+                <div class="gif-with-play">
+                    <img src="fireworks/5.jpg" alt="Self Portrait" data-srcgif="fireworks/5.gif">
+                </div>
+                <div class="gif-with-play">
+                    <img src="fireworks/7.jpg" alt="Self Portrait" data-srcgif="fireworks/7.gif">
                 </div>
             </div>
             <div id="doSale">
                 <a>Сделать заказ</a>
+                <form>
+                    <p>Введите свое имя : </p>
+                    <input type="text" name="Person" id="person"/>
+                    <p>Введите адрес : </p>
+                    <input type="text" name="Address" id="address"/> 
+                    <input type="submit" value="Отправить" />
+                </form>
             </div>
             <div id="contactsCompany">
                 <a>Контакты</a>
+                <p>
+                    Однажды и сюда загрузится текст из файла, но это только однажды
+                </p>
             </div>           
         </div>  
         <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
