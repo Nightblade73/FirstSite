@@ -145,37 +145,44 @@ body {
 }
 
 #doSale p{
-    position: relative;
+    position: absolute;
     font-size: 30px;
-    margin-top: 1%;
     margin-bottom: 0;
     margin-left: 10%;
     text-align: left;
+}
+#doSale p[name="Person"]{
+    margin-top:1%;
+}
+#doSale p[name="email"]{
+    margin-top:5%;
 }
 #doSale form{
     width: 100%;
     position: absolute;
     clear: both;
     min-width: 1920px;
+    margin-top: 10%;
+    margin-left: 5%;
 }
-#person{
 
-}
 .textbox[name="Person"] {
-    margin-top: 25px;
+    /*margin-top: 25px;*/
 }
 .textbox[name="Address"] {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
 .textbox{
+    margin-top:40px;
     position: inherit;
     height: 30px;
     width: 500px;
-    left: 10%;
     top: 0;
+    left: 0;
     font-size: 24px;
-    margin-left: 15%;
+    margin-left: 0%;
 }
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -183,14 +190,14 @@ body {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 }
 .button[name="Send"]{
     position: absolute;
-    top: 56px;
+    top: 100px;
+    left: 540px;
 }
 
 #contactsCompany {
