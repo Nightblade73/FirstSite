@@ -5,10 +5,89 @@
         <link rel="stylesheet" type="text/css" href="css\styles.css">
         <link rel="stylesheet" type="text/css" href="css\gif.css">
     </head>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
     <body>
         <div id="container">
-            <?php include("head.php"); ?>           
+            <?php
+            include("head.php");
+
+            class Logger {
+
+                //статические переменные
+                public static $PATH;
+                protected static $loggers = array();
+                protected $name;
+                protected $file;
+                protected $fp;
+
+                public function __construct($name, $file = null) {
+                    $this->name = $name;
+                    $this->file = $file;
+
+                    $this->open();
+                }
+
+                public function open() {
+                    if (self::$PATH == null) {
+                        return;
+                    }
+
+                    $this->fp = fopen($this->file == null ? self::$PATH . '/' . $this->name . '.log' : self::$PATH . '/' . $this->file, 'a+');
+                }
+
+                public static function getLogger($name = 'root', $file = null) {
+                    if (!isset(self::$loggers[$name])) {
+                        self::$loggers[$name] = new Logger($name, $file);
+                    }
+
+                    return self::$loggers[$name];
+                }
+
+                public function log($message) {
+                    if (!is_string($message)) {
+                        $this->logPrint($message);
+
+                        return;
+                    }
+
+                    $log = '';
+
+                    $log .= '[' . date('D M d H:i:s Y', time()) . '] ';
+                    if (func_num_args() > 1) {
+                        $params = func_get_args();
+
+                        $message = call_user_func_array('sprintf', $params);
+                    }
+
+                    $log .= $message;
+                    $log .= "\n";
+
+                    $this->_write($log);
+                }
+
+                public function logPrint($obj) {
+                    ob_start();
+
+                    print_r($obj);
+
+                    $ob = ob_get_clean();
+                    $this->log($ob);
+                }
+
+                protected function _write($string) {
+                    fwrite($this->fp, $string);
+
+                    echo $string;
+                }
+
+                public function __destruct() {
+                    fclose($this->fp);
+                }
+
+            }
+            ?>           
             <div id="mainPage"> 
+                <div class="infoBlock" id="infoblock"></div>
                 <div id="logo">
                     <a>Фейеверк компани</a>
                 </div>              
@@ -42,13 +121,36 @@
             </div>
             <div id="doSale">
                 <a>Сделать заказ</a>
-                <form>
-                    <p>Введите свое имя : </p>
-                    <input type="text" name="Person" class="textbox"/>
-                    <p>Введите свой e-mail : </p>
-                    <input type="text" name="Address" class="textbox"/> 
-                    <button class="button" name="Send">Отправить</button>
+                <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <p name="Person">Введите свое имя :
+                        <input type="text" name="Person" class="textbox"/>
+                    </p>
+                    <p name="email" value="Отправить">Введите свой e-mail : 
+                        <input type="text" name="Address" id="email" class="textbox"/>      
+
+                        <?php
+                        if (isset($_GET["Address"])) {
+                            $var = '';
+                            if (!filter_input(INPUT_GET, "Address", FILTER_VALIDATE_EMAIL) === false) {
+                                $var = 'Заказ оформлен на адрес:<br>' . $_GET["Address"];
+                            } else {
+                                $var = 'Заказ не оформлен<br>Электронный адрес не верный';
+                            }
+                            echo '<script>
+                                $(window).ready(function () {                             
+                                    setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 1000);
+                                    document.getElementById("infoblock").innerHTML="<a>' . $var . '</a>";
+                                    setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 6000);                              
+                            });
+                            </script>';
+                        }
+                        ?>
+                    </p> 
+                    <p>
+                        <input class="button" type ="submit" name ="Send" id="send" value="Отправить"> 
+                    </p>
                 </form>
+
             </div>
             <div id="contactsCompany">
                 <a>Контакты</a>
@@ -57,12 +159,49 @@
                 </p>
             </div>           
         </div>  
-        <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
         <script>
+//                            $(window).ready(function () {
+//
+//
+//                                setTimeout("$('#infoblock').show('slow');", 1000);
+//                                
+//                                document.getElementById("infoblock").innerHTML="Новый текст!";
+//                                setTimeout("$('#infoblock').hide('slow');", 6000);
+//
+//                            });
 <?php
 include("javascript/scrolling.js");
 include("javascript/gifAnimation.js");
 ?>
+//            $('#email').blur(function () {
+//                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i;
+//                if ($(this).val() && !pattern.test($(this).val()) {
+//                    alert('Вы ввели некорректный e-mail');
+//                    $(this).focus();
+//                }
+//            });
+//            $(document).ready(function () {
+//                var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+//                var mail = $('#email');
+//                mail.blur(function () {
+//                    if (mail.val() !== '') {
+//                        if (mail.val().search(pattern) === 0) {
+//                            $('#valid').text('Подходит');
+//                            $('#submit').attr('disabled', false);
+//                            mail.removeClass('error').addClass('ok');
+//                        } else {
+//                            $('#valid').text('Не подходит');
+//                            $('#submit').attr('disabled', true);
+//                            mail.addClass('ok');
+//                        }
+//                    } else {
+//                        $('#valid').text('Поле e-mail не должно быть пустым!');
+//                        mail.addClass('error');
+//                        $('#submit').attr('disabled', true);
+//                    }
+//                });
+//            });
         </script>
     </body>
 
