@@ -10,8 +10,6 @@
         <div id="container">
             <?php
             include("head.php");
-
-            
             ?>           
             <div id="mainPage"> 
                 <div class="infoBlock" id="infoblock"></div>
@@ -25,9 +23,12 @@
                     <iframe width="854" height="480" src="https://www.youtube.com/embed/V_MoNkm0fl8" frameborder="0" allowfullscreen></iframe>
                 </div>  
                 <div id="description">
-                    <p>
-                        Однажды сюда загрузится текст из файла, но это только однажды
-                    </p>
+
+                    <?php
+                    include 'FileController.php';
+                    loadFile("text/aboutUs.txt");
+                    ?>
+
 
                 </div>             
             </div>
