@@ -5,10 +5,12 @@
         <link rel="stylesheet" type="text/css" href="css\styles.css">
         <link rel="stylesheet" type="text/css" href="css\gif.css">
     </head>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
     <body>
         <div id="container">
             <?php include("head.php"); ?>           
             <div id="mainPage"> 
+                <div class="infoBlock" id="infoblock"></div>
                 <div id="logo">
                     <a>Фейеверк компани</a>
                 </div>              
@@ -51,17 +53,24 @@
 
                         <?php
                         if (isset($_GET["Address"])) {
+                            $var = '';
                             if (!filter_input(INPUT_GET, "Address", FILTER_VALIDATE_EMAIL) === false) {
-                                echo("Email is valid");
+                                $var = 'Заказ оформлен на адрес:<br>' . $_GET["Address"];
                             } else {
-                                echo("Email is not valid");
+                                $var = 'Заказ не оформлен\nЭлектронный адрес не верный';
                             }
+                            echo '<script>
+                                $(window).ready(function () {                             
+                                    setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 1000);
+                                    document.getElementById("infoblock").innerHTML="<a>' . $var . '</a>";
+                                    setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 6000);                              
+                            });
+                            </script>';
                         }
                         ?>
-
                     </p> 
                     <p>
-                        <input class="button" type ="submit" name ="Send"value="Отправить"> 
+                        <input class="button" type ="submit" name ="Send" id="send" value="Отправить"> 
                     </p>
                 </form>
 
@@ -73,8 +82,17 @@
                 </p>
             </div>           
         </div>  
-        <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
         <script>
+//                            $(window).ready(function () {
+//
+//
+//                                setTimeout("$('#infoblock').show('slow');", 1000);
+//                                
+//                                document.getElementById("infoblock").innerHTML="Новый текст!";
+//                                setTimeout("$('#infoblock').hide('slow');", 6000);
+//
+//                            });
 <?php
 include("javascript/scrolling.js");
 include("javascript/gifAnimation.js");
