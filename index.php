@@ -27,6 +27,8 @@
                     <?php
                     include 'FileController.php';
                     loadFile("text/aboutUs.txt");
+                    $portalDir = dirname(__FILE__);
+                    saveFile("Вход на сайт", $portalDir);
                     ?>
 
 
@@ -71,6 +73,8 @@
                                     setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 6000);                              
                             });
                             </script>';
+
+                            saveFile("Пользователь нажал на \"Отправить заказ\"\r\n" . str_replace('<br>', ':', $var) . "\r\n", $portalDir);
                         }
                         ?>
                     </p> 
@@ -89,47 +93,11 @@
         </div>  
 
         <script>
-//                            $(window).ready(function () {
-//
-//
-//                                setTimeout("$('#infoblock').show('slow');", 1000);
-//                                
-//                                document.getElementById("infoblock").innerHTML="Новый текст!";
-//                                setTimeout("$('#infoblock').hide('slow');", 6000);
-//
-//                            });
 <?php
 include("javascript/scrolling.js");
 include("javascript/gifAnimation.js");
 ?>
-//            $('#email').blur(function () {
-//                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i;
-//                if ($(this).val() && !pattern.test($(this).val()) {
-//                    alert('Вы ввели некорректный e-mail');
-//                    $(this).focus();
-//                }
-//            });
-//            $(document).ready(function () {
-//                var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
-//                var mail = $('#email');
-//                mail.blur(function () {
-//                    if (mail.val() !== '') {
-//                        if (mail.val().search(pattern) === 0) {
-//                            $('#valid').text('Подходит');
-//                            $('#submit').attr('disabled', false);
-//                            mail.removeClass('error').addClass('ok');
-//                        } else {
-//                            $('#valid').text('Не подходит');
-//                            $('#submit').attr('disabled', true);
-//                            mail.addClass('ok');
-//                        }
-//                    } else {
-//                        $('#valid').text('Поле e-mail не должно быть пустым!');
-//                        mail.addClass('error');
-//                        $('#submit').attr('disabled', true);
-//                    }
-//                });
-//            });
+
         </script>
     </body>
 
