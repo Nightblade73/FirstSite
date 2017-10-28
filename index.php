@@ -23,19 +23,25 @@
                     <iframe width="854" height="480" src="https://www.youtube.com/embed/V_MoNkm0fl8" frameborder="0" allowfullscreen></iframe>
                 </div>  
                 <div id="description">
-
                     <?php
                     include 'FileController.php';
                     loadFile("text/aboutUs.txt");
                     $portalDir = dirname(__FILE__);
                     saveFile("Вход на сайт", $portalDir);
                     ?>
-
-
                 </div>             
             </div>
             <div id="moreExamples">
-                <a>Примеры работ</a>
+                <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Больше примеров">
+                <div id="wrap"></div>
+                <div id="catalog">
+                    <img src="images/close.png" name="Close" onclick="show(false)">
+                    <?php
+                    include 'DBController.php';
+                    $db = new DBController();
+                    $db->connect();
+                    ?>
+                </div>
                 <div class="gif-with-play">
                     <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
                 </div>
@@ -56,8 +62,7 @@
                         <input type="text" name="Person" class="textbox"/>
                     </p>
                     <p name="email" value="Отправить">Введите свой e-mail : 
-                        <input type="text" name="Address" id="email" class="textbox"/>      
-
+                        <input type="text" name="Address" class="textbox"/>      
                         <?php
                         if (isset($_GET["Address"])) {
                             $var = '';
@@ -73,14 +78,14 @@
                                     setTimeout("$(\'#infoblock\').slideToggle(\'slow\');", 6000);                              
                             });
                             </script>';
-
                             saveFile("Пользователь нажал на \"Отправить заказ\"\r\n" . str_replace('<br>', ':', $var) . "\r\n", $portalDir);
                         }
                         ?>
+                        <input class="button" type ="submit" name ="Send"  value="Отправить"> 
                     </p> 
-                    <p>
-                        <input class="button" type ="submit" name ="Send" id="send" value="Отправить"> 
-                    </p>
+
+
+
                 </form>
 
             </div>
@@ -93,6 +98,19 @@
         </div>  
 
         <script>
+            function show(state) {
+                if (state) {
+                    $("#header").slideToggle(1000);
+                    //      document.body.style.display = block;
+                    setTimeout("$('#catalog').slideToggle(1000);", 1000);
+                    setTimeout("document.getElementById('wrap').style.display = 'block'", 2000);
+                } else
+                {
+                    $("#catalog").slideToggle(1000);
+                    setTimeout("$('#header').slideToggle(1000);", 1000);
+                    document.getElementById('wrap').style.display = 'none';
+                }
+            }
 <?php
 include("javascript/scrolling.js");
 include("javascript/gifAnimation.js");
