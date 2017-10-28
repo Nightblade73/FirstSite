@@ -230,6 +230,7 @@ body {
     display: none;
     background: #1e2226;;
     z-index: 200;
+    overflow: auto;
     position: fixed;
     left: 0;
     right: 0;
@@ -255,3 +256,21 @@ body {
     z-index: 100;
     overflow: auto;
 }
+
+/*scrollbar {
+width: 25px;
+height: 12px;
+}
+
+scrollbar-track {
+background: #f5f5f5;
+border-radius: 10px;
+}
+scrollbar-thumb {
+border-radius: 10px;
+background: #ccc;  
+}
+
+scrollbar-thumb:hover {
+background: #999;  
+}*/

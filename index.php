@@ -9,7 +9,9 @@
     <body>
         <div id="container">
             <?php
+            include 'DBController.php';
             include("head.php");
+            
             ?>           
             <div id="mainPage"> 
                 <div class="infoBlock" id="infoblock"></div>
@@ -35,11 +37,13 @@
                 <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Больше примеров">
                 <div id="wrap"></div>
                 <div id="catalog">
+
                     <img src="images/close.png" name="Close" onclick="show(false)">
                     <?php
-                    include 'DBController.php';
                     $db = new DBController();
                     $db->connect();
+                    $db->getInformationById(740);
+//                    $db->disconnect();
                     ?>
                 </div>
                 <div class="gif-with-play">
@@ -101,7 +105,6 @@
             function show(state) {
                 if (state) {
                     $("#header").slideToggle(1000);
-                    //      document.body.style.display = block;
                     setTimeout("$('#catalog').slideToggle(1000);", 1000);
                     setTimeout("document.getElementById('wrap').style.display = 'block'", 2000);
                 } else
