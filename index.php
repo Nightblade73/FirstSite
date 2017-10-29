@@ -36,7 +36,7 @@
 
             </div>
             <div id="moreExamples">
-                <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Больше примеров">
+
                 <div id="wrap"></div>
                 <div id="catalog">
 
@@ -48,19 +48,18 @@
                     $db->getAllInfo();
                     ?>
                 </div>
-                <div class="thumb-wrap">
-                    <div class="gif-with-play">
-                        <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
-                    </div>
-                    <div class="gif-with-play">
-                        <img src="fireworks/6.jpg" alt="Self Portrait" data-srcgif="fireworks/6.gif">
-                    </div>
-                    <div class="gif-with-play">
-                        <img src="fireworks/5.jpg" alt="Self Portrait" data-srcgif="fireworks/5.gif">
-                    </div>
-                    <div class="gif-with-play">
-                        <img src="fireworks/7.jpg" alt="Self Portrait" data-srcgif="fireworks/7.gif">
-                    </div>
+                <div class="gif-with-play">
+                    <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
+                </div>
+                <div class="gif-with-play">
+                    <img src="fireworks/6.jpg" alt="Self Portrait" data-srcgif="fireworks/6.gif">
+                </div>
+                <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Посмотреть каталог">
+                <div class="gif-with-play">
+                    <img src="fireworks/5.jpg" alt="Self Portrait" data-srcgif="fireworks/5.gif">
+                </div>
+                <div class="gif-with-play">
+                    <img src="fireworks/7.jpg" alt="Self Portrait" data-srcgif="fireworks/7.gif">
                 </div>
             </div>
             <div id="doSale">

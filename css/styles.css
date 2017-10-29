@@ -192,6 +192,10 @@ body {
     margin-left: 24%;
 }
 
+.button:hover {
+    background: #323940;
+    cursor: pointer;
+}
 .button {
     background-color: #1e2226;
     border: none;
@@ -203,18 +207,22 @@ body {
     font-size: 20px;
     border-radius: 8px;
     margin: 4px 2px;
-    cursor: pointer;
+
 }
 .button[name="Send"]{
     margin-top: 120px;
 }
 .button[name="Examples"]{
     z-index: 4;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    /* position: absolute; */
+    /* margin-top: 20%; */
+    margin-left: 50%;
+    margin-right: 50%;
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
+    /* display: flex; */
+
 }
 
 #contactsCompany {
