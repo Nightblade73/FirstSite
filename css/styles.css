@@ -34,13 +34,55 @@ body {
     width: 100%;
 }
 .part {
-    background-image: url(../images/firstPage.png);
+
     background-color: #000;
     background-repeat: no-repeat;
     background-size: contain;
     height: 760px;
+
+}
+#mainPage{
+    display: block;
+    background-image: url(../images/firstPage.png);
+}
+#aboutCompany{
+    background-image: url(../images/secondPage.png);
+}
+#doSale{
+    background-image: url(../images/thirdPage.png);
+}
+#contactsCompany {
+    background-image: url(../images/forthPage.png);
 }
 
+.thumb-wrap iframe {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    border: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.thumb-wrap{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+#description {
+    position: absolute;
+    overflow: hidden;
+    line-height: 1;
+    margin-top: 180px;
+    text-align: left;
+    text-indent: 60px;
+    margin-left: 500px;
+    max-width: 500px;
+}
 .logo{
     padding-top: 25%;
     padding-left: 0%;
@@ -61,28 +103,47 @@ body {
     text-decoration: none;
 }
 
-
-@media screen and (max-width:992px)
+@media screen and (max-width: 992px)
 {
     .navbar-default .navbar-nav>li>a{
         font-size: 18px;
     }
     .part {
-        background-image: url(../images/firstPage.png);
-        background-color: #000;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 450px;
+        height: 500px;
+    }
+    #description {
+        margin-left: 390px;
+        margin-top: 130px;
     }
 }
 
 @media screen and (max-width: 767px)
 {
+    .thumb-wrap{
+        margin-top: 250px;
+    }
+    #description {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .thumb-wrap iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .mycon{
+        width:500px;
+    }
     .navbar-default .navbar-nav>li{
         width: 100%;
     }
     .rows{
         padding: 0; 
+    }
+    #мain{
+        display: none;
+    }
+    #mainPage{
+        display: none;
     }
     .links{
         width: 100%;
@@ -90,16 +151,20 @@ body {
         margin-right: 0;
     }
 }
+
 @media screen and (max-width: 425px)
 {
-    .part {
-        background-image: url(../images/firstPage.png);
-        background-color: #000;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 200px;
+
+    .mycon{
+        width:500px;
     }
 }
+
+
+
+
+
+
 
 
 /*

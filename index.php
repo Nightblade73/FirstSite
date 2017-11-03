@@ -24,10 +24,10 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-						
-                    <div class="collapse navbar-collapse rows" id="bs-example-navbar-collapse-1">
+
+                    <div class="rows collapse navbar-collapse rows" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav links">
-                            <li class="active-link"><a href="#mainPage">главная</a></li>
+                            <li id="мain"><a href="#mainPage">главная</a></li>
                             <li><a href="#aboutCompany">о нас</a></li>
                             <li><a href="#moreExamples">примеры</a></li>
                             <li><a href="#doSale">сделать заказ</a></li>
@@ -38,29 +38,30 @@
                 </div>
             </nav>
         </header>
-        <div class="container">
+        <div class="container mycon">
             <div class="part" id="mainPage"> 
                 <!--<div class="infoBlock" id="infoblock"></div>-->
                 <div class="logo">
                     <a>Фейеверк компани</a>
-                </div>              
+                </div> 
             </div>
             <div class="part" id="aboutCompany"> 
-                <div class="logo">
-                    <a>Фейеверк компани</a>
-                </div>              
+                <div class="thumb-wrap">
+                    <iframe src="https://www.youtube.com/embed/V_MoNkm0fl8"></iframe>
+                </div>  
+                <div id="description">
+<a>О нас</a>
+                    <?php
+                    include 'FileController.php';
+                    loadFile("text/aboutUs.txt");
+                    ?>
+                </div> 
             </div><div class="part" id="moreExamples"> 
-                <div class="logo">
-                    <a>Фейеверк компани</a>
-                </div>              
+
             </div><div class="part" id="doSale"> 
-                <div class="logo">
-                    <a>Фейеверк компани</a>
-                </div>              
+
             </div><div class="part" id="contactsCompany"> 
-                <div class="logo">
-                    <a>Фейеверк компани</a>
-                </div>              
+
             </div>              
         </div>
     </div>
@@ -68,9 +69,9 @@
     <script src="http://code.jquery.com/jquery.min.js"></script> 
     <script src="js/bootstrap.min.js"></script> 
     <script>
-        <?php
-        include("javascript/scrolling.js");
-        ?>
+<?php
+include("javascript/scrolling.js");
+?>
     </script>
 </body>
 
