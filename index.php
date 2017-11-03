@@ -23,6 +23,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        <a class="navbar-brand logo" name="Logo" href="#">Фейеверк компани</a>
                     </div>
 
                     <div class="rows collapse navbar-collapse rows" id="bs-example-navbar-collapse-1">
@@ -48,13 +49,14 @@
             <div class="part" id="aboutCompany"> 
                 <div class="thumb-wrap">
                     <iframe src="https://www.youtube.com/embed/V_MoNkm0fl8"></iframe>
-                </div>  
+                </div> 
+
                 <div id="description">
-<a>О нас</a>
-                    <?php
-                    include 'FileController.php';
-                    loadFile("text/aboutUs.txt");
-                    ?>
+                    <p name="Title">О нас</p>
+                       <?php
+                       include 'FileController.php';
+                       loadFile("text/aboutUs.txt");
+                       ?>
                 </div> 
             </div><div class="part" id="moreExamples"> 
 

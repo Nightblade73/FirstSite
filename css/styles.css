@@ -1,10 +1,12 @@
 body {
     background: #000;
     color: #FFF;
+    text-align: center;
     font-family: Myriad Pro, sans-serif;
     font-size: 12px; 
     font-weight: normal;
     padding-top: 50px;
+    min-width: 400px;
 }
 
 .menu{
@@ -73,26 +75,30 @@ body {
     overflow: hidden;
     float: left;
 }
+
 #description {
     position: absolute;
     overflow: hidden;
     line-height: 1;
-    margin-top: 180px;
     text-align: left;
+    font-size: 20px;
     text-indent: 60px;
-    margin-left: 500px;
+    margin-top: 110px;
+    margin-left: 600px;
     max-width: 500px;
 }
+#description p[name="Title"]{
+    font-size: 25px;
+}
 .logo{
-    padding-top: 25%;
+    padding-top: 20%;
     padding-left: 0%;
     text-align: center;
-
 }
 .logo a{
     color: #fff;
     font-family: Mistral;
-    font-size: 8vw; 
+    font-size: 140px; 
     text-shadow:
         -3px -3px 0 #000,
         3px -3px 0 #000,
@@ -102,28 +108,66 @@ body {
 .logo a:hover {
     text-decoration: none;
 }
+.logo[name="Logo"]{
+    display: none;
+}
 
+@media screen and (max-width: 1199.5px)
+{
+    #description {
+        margin-top: 70px;
+        margin-left: 500px;
+
+    }
+    .logo a{
+        font-size: 100px;
+    }
+}
 @media screen and (max-width: 992px)
 {
     .navbar-default .navbar-nav>li>a{
-        font-size: 18px;
+        font-size: 16px;
     }
     .part {
         height: 500px;
     }
     #description {
         margin-left: 390px;
-        margin-top: 130px;
+        margin-top: 60px;
+        font-size: 14px;
+    }
+    .logo a{
+        font-size: 70px;
     }
 }
 
-@media screen and (max-width: 767px)
+@media screen and (max-width: 767.5px)
 {
+    .logo[name="Logo"]{
+        display: block;
+        font-family: Mistral;
+        font-size: 35px;
+        padding-top: 15px;
+        padding-left: 20px;
+        color: #FFF;
+    }
+    .logo[name="Logo"]:hover{
+        color: #FFF;
+    }
+    .logo[name="Logo"]:focus{
+        color: #FFF;
+    }
+    #description p[name="Title"]
+    {
+        font-size: initial;
+        margin-top: 20px;
+    }
     .thumb-wrap{
-        margin-top: 250px;
+        margin-top: 200px;
     }
     #description {
         margin-left: 0;
+        width: 490px;
         margin-top: 0;
     }
     .thumb-wrap iframe {
@@ -159,6 +203,7 @@ body {
         width:500px;
     }
 }
+
 
 
 
