@@ -6,6 +6,7 @@ body {
     font-weight: normal;
     padding-top: 50px;
 }
+
 .menu{
     border: 0;
     background-color: #1e2226; 
@@ -26,76 +27,28 @@ body {
     background: #323940;
     color: #FFF; 
 }
+.navbar-default .navbar-nav>li>a:focus{
+    color: #FFF; 
+}
 .links{
     width: 100%;
 }
-
-/*#container {
-    background: #000;
-    text-align: center;
-    width: 100%;
-    height: 5480px;
-    position: absolute;  
-}
-@media(min-width: 1330){
-#header {
-    background: #1e2226;
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    cursor: auto;
-    position: fixed;
-    z-index: 10;
-}
-}
-@media(max-width: 1330){
-    #header {
-        background: #1e2226;
-        width: 100%;
-        height: 40px;
-        font-size: 25px; 
-        text-align: center;
-        cursor: auto;
-        position: fixed;
-        z-index: 10;
-    }
-}
-
-*/
-
-
-/*header a {
-    color: #FFF;
-    text-decoration: none;
-    text-align: center;
-    background: #1e2226;
-    font-size: 34px; 
-    position: absolute;
-    left: 0%;
-}
-header a:hover {
-    cursor: pointer;
-    background: #323940;
-}*/
-
-/*
-
-#mainPage {    
+.part {
     background-image: url(../images/firstPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: contain;
-    margin:0 auto;
-    width: 80%;
-    height: 19.7%;
-    padding-top: 0px;
-    margin-top: 80px;
+    height: 760px;
 }
-#logo {
-    position: relative;
-    text-align: center;
+
+.logo{
     padding-top: 25%;
     padding-left: 0%;
+    text-align: center;
+
+}
+.logo a{
+    color: #fff;
     font-family: Mistral;
     font-size: 8vw; 
     text-shadow:
@@ -104,6 +57,52 @@ header a:hover {
         -3px 3px 0 #000,
         3px 3px 0 #000;
 }
+.logo a:hover {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:992px)
+{
+    .navbar-default .navbar-nav>li>a{
+        font-size: 18px;
+    }
+    .part {
+        background-image: url(../images/firstPage.png);
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .navbar-default .navbar-nav>li{
+        width: 100%;
+    }
+    .rows{
+        padding: 0; 
+    }
+    .links{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    .part {
+        background-image: url(../images/firstPage.png);
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 200px;
+    }
+}
+
+
+/*
 
 #aboutCompany {
     background-image: url(../images/secondPage.png);
