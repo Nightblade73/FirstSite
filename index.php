@@ -6,10 +6,12 @@
         <title>Сайт фейерверков</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
         <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
     </head>
     <body>
 
@@ -60,14 +62,16 @@
                 </div> 
             </div>
             <div class="part" id="moreExamples"> 
+                <input class="btn btn-default button" type="submit" onclick="show(true)" name="Examples" value="Посмотреть каталог">
+
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="card gif-with-play">
                             <img src="fireworks/11.jpg" alt="Self Portrait" data-srcgif="fireworks/11.gif">
                         </div>
                     </div>
-                    <input class="btn btn-default" type="submit" value="Submit">
-                    <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Посмотреть каталог">
+
+<!--<input class="button" type ="submit" onclick="show(true)" name="Examples" value="Посмотреть каталог">-->
                     <div class="col-md-6 col-sm-6">
                         <div class="card gif-with-play">
                             <img src="fireworks/9.jpg" alt="Self Portrait" data-srcgif="fireworks/9.gif">

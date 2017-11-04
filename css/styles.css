@@ -2,7 +2,8 @@ body {
     background: #000;
     color: #FFF;
     text-align: center;
-    font-family: Myriad Pro, sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    /*font-family: Myriad Pro, sans-serif;*/
     font-size: 12px; 
     font-weight: normal;
     padding-top: 50px;
@@ -97,7 +98,7 @@ body {
 }
 .logo a{
     color: #fff;
-    font-family: Mistral;
+    font-family: 'Marck Script', cursive;
     font-size: 140px; 
     text-shadow:
         -3px -3px 0 #000,
@@ -129,9 +130,30 @@ body {
     margin-top: 50px;
 }
 
-
 .play.gif-with-play img{
     opacity: 1;
+}
+
+.button {
+    /*    background-color: #1e2226;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 8px;
+        margin: 4px 2px;*/
+
+}
+.button[name="Send"]{
+    margin-top: 120px;
+}
+.button[name="Examples"]{
+    z-index: 4;
+    
+
 }
 
 @media screen and (max-width: 1199.5px)
@@ -188,7 +210,7 @@ body {
     }
     .logo[name="Logo"]{
         display: block;
-        font-family: Mistral;
+        font-family: 'Marck Script', cursive;
         font-size: 35px;
         padding-top: 15px;
         padding-left: 20px;
