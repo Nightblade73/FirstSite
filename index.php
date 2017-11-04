@@ -16,7 +16,7 @@
     <body>
 
         <header>
-            <nav class="navbar navbar-default navbar-fixed-top menu">
+            <nav class="navbar navbar-default navbar-fixed-top menu" id="menu">
                 <div class="container">  
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -62,28 +62,36 @@
                 </div> 
             </div>
             <div class="part" id="moreExamples"> 
-                <input class="btn btn-default button" type="submit" onclick="show(true)" name="Examples" value="Посмотреть каталог">
+                <div id="wrap"></div>
+                <div id="catalog">
 
+                    <img src="images/close.png" name="Close" onclick="show(false)">
+                    <?php
+                    include 'DBController.php';
+                    $db = new DBController();
+                    $db->connect();
+                    $db->getAllInfo();
+                    ?>
+                </div>
+                <input class="btn btn-default button" type="submit" onclick="show(true)" name="Examples" value="Посмотреть каталог">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="card gif-with-play">
                             <img src="fireworks/11.jpg" alt="Self Portrait" data-srcgif="fireworks/11.gif">
                         </div>
                     </div>
-
-<!--<input class="button" type ="submit" onclick="show(true)" name="Examples" value="Посмотреть каталог">-->
                     <div class="col-md-6 col-sm-6">
                         <div class="card gif-with-play">
                             <img src="fireworks/9.jpg" alt="Self Portrait" data-srcgif="fireworks/9.gif">
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="card gif-with-play myshow">
+                    <div class="col-md-6 col-sm-6 hidden-xs">
+                        <div class="card gif-with-play">
                             <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 "> 
-                        <div class="card gif-with-play myshow">
+                    <div class="col-md-6 col-sm-6 hidden-xs"> 
+                        <div class="card gif-with-play">
                             <img src="fireworks/10.jpg" alt="Self Portrait" data-srcgif="fireworks/10.gif">
                         </div>
                     </div>
@@ -106,6 +114,7 @@
 <?php
 include("javascript/scrolling.js");
 include("javascript/gifAnimation.js");
+include("javascript/showCatalog.js");
 ?>
     </script>
 </body>
