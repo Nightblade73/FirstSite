@@ -53,16 +53,44 @@
 
                 <div id="description">
                     <p name="Title">О нас</p>
-                       <?php
-                       include 'FileController.php';
-                       loadFile("text/aboutUs.txt");
-                       ?>
+                    <?php
+                    include 'FileController.php';
+                    loadFile("text/aboutUs.txt");
+                    ?>
                 </div> 
-            </div><div class="part" id="moreExamples"> 
+            </div>
+            <div class="part" id="moreExamples"> 
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="card gif-with-play">
+                            <img src="fireworks/11.jpg" alt="Self Portrait" data-srcgif="fireworks/11.gif">
+                        </div>
+                    </div>
+                    <input class="btn btn-default" type="submit" value="Submit">
+                    <input class="button" type ="submit" onclick="show(true)" name ="Examples" value="Посмотреть каталог">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="card gif-with-play">
+                            <img src="fireworks/9.jpg" alt="Self Portrait" data-srcgif="fireworks/9.gif">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="card gif-with-play myshow">
+                            <img src="fireworks/2.jpg" alt="Self Portrait" data-srcgif="fireworks/2.gif">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 "> 
+                        <div class="card gif-with-play myshow">
+                            <img src="fireworks/10.jpg" alt="Self Portrait" data-srcgif="fireworks/10.gif">
+                        </div>
+                    </div>
 
-            </div><div class="part" id="doSale"> 
 
-            </div><div class="part" id="contactsCompany"> 
+                </div>
+            </div>
+            <div class="part" id="doSale"> 
+
+            </div>
+            <div class="part" id="contactsCompany"> 
 
             </div>              
         </div>
@@ -73,6 +101,7 @@
     <script>
 <?php
 include("javascript/scrolling.js");
+include("javascript/gifAnimation.js");
 ?>
     </script>
 </body>
