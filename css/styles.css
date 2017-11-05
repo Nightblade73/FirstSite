@@ -218,6 +218,29 @@ body {
     z-index: 100;
     overflow: auto;
 }
+.mar-top{
+    padding-top: 250px;
+}
+.infoBlock {
+    position: fixed;
+    background-color: #1e2226;
+    /*margin-top: 20px;*/ 
+    border: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+    margin: 20px 40% 0;
+    min-width: 300px;
+    left: 0;
+    right: 0;
+}
+.infoBlock a{
+    color: #FFF;
+    font-size: 16px;
+}
+.infoBlock a:hover{
+    text-decoration: none;   
+}
 
 @media screen and (max-width: 1500px)
 {
@@ -247,11 +270,14 @@ body {
 
     .element img{
         left: 30px;
-        
+
     }
 }
 @media screen and (max-width: 1199.5px)
 {
+    .mar-top{
+        padding-top: 200px;
+    }
     #catalog img[name="Close"]{
         margin-right: 70px;
     }
@@ -284,6 +310,9 @@ body {
 }
 @media screen and (max-width: 992px)
 {
+    .mar-top{
+        padding-top: 150px;
+    }
     #description p[name="Title"]{
         font-size: 20px;
     }
@@ -325,6 +354,9 @@ body {
 }
 @media screen and (max-width: 767.5px)
 {
+    .mar-top{
+        padding-top: 100px;
+    }
     .button[name="Examples"]{
         top: 20px;
     }
@@ -653,3 +685,4 @@ background: #ccc;
 scrollbar-thumb:hover {
 background: #999;  
 }*/
+

@@ -4,6 +4,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Сайт фейерверков</title>
+        <script src="http://code.jquery.com/jquery.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script> 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -14,7 +16,6 @@
                 <![endif]-->
     </head>
     <body>
-
         <header>
             <nav class="navbar navbar-default navbar-fixed-top menu" id="menu">
                 <div class="container">  
@@ -41,9 +42,9 @@
                 </div>
             </nav>
         </header>
-        <div class="container mycon">
+        <div class="alert alert-info infoBlock center-block" id="infoblock" role="alert">...</div>
+        <div class="container mycon">       
             <div class="part" id="mainPage"> 
-                <!--<div class="infoBlock" id="infoblock"></div>-->
                 <div class="logo">
                     <a>Фейеверк компани</a>
                 </div> 
@@ -100,16 +101,31 @@
                 </div>
             </div>
             <div class="part" id="doSale"> 
-
+                <form class="mar-top">
+                    <div class="form-group">
+                        <label for="inputFIO">Фимилия Имя Отчество</label>
+                        <input type="text" name="FIO" class="form-control" id="inputFIO" placeholder="Введите ФИО">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Адрес email:</label>
+                        <input type="email" name="address" class="form-control" id="inputEmail" placeholder="Введите email">
+                    </div>
+                    <button type="submit" class="btn btn-default button">Отправить</button>
+                    <?php
+                    include './ValidationController.php';
+                    $valid = new ValidationController();
+                    if (isset($_GET['address'])) {
+                        $check_email = htmlspecialchars($_GET['address']);
+                        $valid->check_email($check_email, 'address');
+                    }
+                    ?>
+                </form>
             </div>
             <div class="part" id="contactsCompany"> 
 
             </div>              
         </div>
     </div>
-
-    <script src="http://code.jquery.com/jquery.min.js"></script> 
-    <script src="js/bootstrap.min.js"></script> 
     <script>
 <?php
 include("javascript/scrolling.js");
