@@ -6,10 +6,12 @@
         <title>Сайт фейерверков</title>
         <script src="http://code.jquery.com/jquery.min.js"></script> 
         <script src="js/bootstrap.min.js"></script> 
+        <script src="js/scrolling.js"></script> 
+        <script src="js/showCatalog.js"></script> 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+        <!--        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">-->
         <!--[if lt IE 9]>
                   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
                   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -58,7 +60,8 @@
                     <p name="Title">О нас</p>
                     <?php
                     include 'FileController.php';
-                    loadFile("text/aboutUs.txt");
+                    $fc = new FileController();
+                    $fc->loadFile("text/aboutUs.txt");
                     ?>
                 </div> 
             </div>
@@ -96,11 +99,9 @@
                             <img src="fireworks/10.jpg" alt="Self Portrait" data-srcgif="fireworks/10.gif">
                         </div>
                     </div>
-
-
                 </div>
             </div>
-            <div class="part" id="doSale"> 
+            <div class="part" id="doSale" > 
                 <form class="mar-top">
                     <div class="form-group">
                         <label for="inputFIO">Фимилия Имя Отчество</label>
@@ -122,15 +123,16 @@
                 </form>
             </div>
             <div class="part" id="contactsCompany"> 
-
+                <h3>Злесь должна быть информация о контактах</h3>
+                <?php
+                $fc->loadFile("text/contacts.txt");
+                ?>
             </div>              
         </div>
     </div>
     <script>
 <?php
-include("javascript/scrolling.js");
-include("javascript/gifAnimation.js");
-include("javascript/showCatalog.js");
+include 'js/gifAnimation.js';
 ?>
     </script>
 </body>
