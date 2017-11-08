@@ -1,113 +1,471 @@
 body {
-    background: #FFF;
-    color: #FFF;
-    margin: 0px;
-    font-family: Myriad Pro, semibold;
-    font-size: 34px; 
-    width: 100%;
-}
-p{
-    font-size: 1.5vw; 
-}
-#container {
     background: #000;
-    text-align: center;
-    width: 100%;
-    height: 5480px;
-    position: absolute;  
-}
-/*@media(min-width: 1330){*/
-    #header {
-        background: #1e2226;
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        cursor: auto;
-        position: fixed;
-        z-index: 10;
-    }
-/*}
-@media(max-width: 1330){
-    #header {
-        background: #1e2226;
-        width: 100%;
-        height: 40px;
-        font-size: 25px; 
-        text-align: center;
-        cursor: auto;
-        position: fixed;
-        z-index: 10;
-    }
-}*/
-
-#header div {
-    background: #1e2226;
-    width: 16%;
-    height: 100%;
-    position: absolute;
-}
-
-#header a {
     color: #FFF;
+    text-align: center;
+    /*font-family: 'Fira Sans', sans-serif;*/
+    font-family: Myriad Pro, sans-serif;
+    font-size: 12px; 
+    font-weight: normal;
+    padding-top: 50px;
+    min-width: 400px;
+}
+
+.menu{
+    border: 0;
+    background-color: #1e2226; 
+}
+.navbar-default .navbar-nav>li{
+    width: 20%;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #FFF;
+    padding: 15px 0;
     text-decoration: none;
     text-align: center;
-    line-height: 250%;
-    background: #1e2226;
-    width: 100%;
-    height: 100%;
-    font-size: 34px; 
-    position: absolute;
-    left: 0%;
+    font-size: 25px;
+    text-transform: uppercase;
 }
-#header a:hover {
+.navbar-default .navbar-nav>li>a:hover{
     cursor: pointer;
     background: #323940;
+    color: #FFF; 
 }
-
-#main {
-    margin-left: 10%;
+.navbar-default .navbar-nav>li>a:focus{
+    color: #FFF; 
 }
-
-#aboutUs {
-    margin-left: 26%;
+.links{
+    width: 100%;
 }
+.part {
 
-#examples {
-    margin-left: 42%;
-}
-
-#order {
-    margin-left: 58%;
-}
-
-#contacts {
-    margin-left: 74%;
-}
-
-#mainPage {    
-    background-image: url(../images/firstPage.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: contain;
-    margin:0 auto;
-    width: 80%;
-    height: 19.7%;
-    padding-top: 0px;
-    margin-top: 80px;
+    height: 760px;
+
 }
-#logo {
+#mainPage{
+    display: block;
+    background-image: url(../images/firstPage.png);
+}
+#aboutCompany{
+    background-image: url(../images/secondPage.png);
+}
+#doSale{
+    background-image: url(../images/thirdPage.png);
+}
+#contactsCompany {
+    background-image: url(../images/forthPage.png);
+}
+
+.thumb-wrap iframe {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    border: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.thumb-wrap{
     position: relative;
-    text-align: center;
-    padding-top: 25%;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+#description {
+    position: absolute;
+    overflow: hidden;
+    line-height: 1;
+    text-align: left;
+    font-size: 20px;
+    text-indent: 60px;
+    margin-top: 110px;
+    margin-left: 600px;
+    max-width: 500px;
+}
+#description p[name="Title"]{
+    font-size: 25px;
+}
+.logo{
+    padding-top: 20%;
     padding-left: 0%;
+    text-align: center;
+}
+.logo a{
+    color: #fff;
     font-family: Mistral;
-    font-size: 8vw; 
+    /*font-family: 'Marck Script', cursive;*/
+    font-size: 140px; 
     text-shadow:
         -3px -3px 0 #000,
         3px -3px 0 #000,
         -3px 3px 0 #000,
         3px 3px 0 #000;
 }
+.logo a:hover {
+    text-decoration: none;
+}
+.logo[name="Logo"]{
+    display: none;
+}
+
+.gif-with-play img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.gif-with-play img,
+.play.gif-with-play img{
+    opacity: .6;
+}
+
+.gif-with-play img,
+.play.gif-with-play img{
+    width: 500px;
+    height: 331px;
+}
+
+.play.gif-with-play img{
+    opacity: 1;
+}
+
+.button {
+    background-color: #1e2226;
+    border: none;
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #323940;
+    color: white;
+}
+.button:focus{
+    background-color: #1e2226;
+    color: white;
+}
+.button[name="Send"]{
+    margin-top: 120px;
+}
+
+.button[name="Examples"]{
+    z-index: 4;
+    position: relative;
+    top: 350px;
+}
+
+#catalog{
+    width: 90%;
+    height: 90%;
+    margin: 50px auto;
+    display: none;
+    background: #1e2226;;
+    z-index: 200;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+}
+#catalog img[name="Close"]{
+    margin-right: 100px;
+    right: 0;
+    margin-top: 4px;
+    position: fixed;
+    cursor: pointer;
+}
+.element {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+.element p{
+    margin-left: 450px;
+    text-align: left;
+    width: 800px;
+    margin-bottom: 0%;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.element p[name="Name"]{
+    margin-top: 0;
+    font-size: 26px;
+}
+.element img{
+    margin-top: 40px;
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    height: auto;
+}
+#wrap {
+    display: none;
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+    background-color: rgba(1, 1, 1, 0.725);
+    z-index: 100;
+    overflow: auto;
+}
+.mar-top{
+    padding-top: 250px;
+}
+.infoBlock {
+    position: fixed;
+    background-color: #1e2226;
+    /*margin-top: 20px;*/ 
+    border: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+    margin: 20px 40% 0;
+    min-width: 300px;
+    left: 0;
+    right: 0;
+}
+.infoBlock a{
+    color: #FFF;
+    font-size: 16px;
+}
+.infoBlock a:hover{
+    text-decoration: none;   
+}
+#contactsCompany {
+    text-indent: 60px;
+    font-size: 20px;
+}
+#contactsCompany p{
+    position: relative;
+    margin: 0 auto;
+    text-indent: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 1500px)
+{
+    #catalog img[name="Close"]{
+        margin-right: 90px;
+    }
+    .element p{
+        margin-left: 350px;
+        width: 650px;
+        font-size: 15px;
+    }
+
+    .element img{
+        left: 60px;
+    }
+}
+@media screen and (max-width: 1218px)
+{
+    #catalog img[name="Close"]{
+        margin-right: 80px;
+    }
+    .element p{
+        margin-left: 300px;
+        width: 650px;
+        font-size: 14px;
+    }
+
+    .element img{
+        left: 30px;
+
+    }
+}
+@media screen and (max-width: 1199.5px)
+{
+    .mar-top{
+        padding-top: 200px;
+    }
+    #catalog img[name="Close"]{
+        margin-right: 70px;
+    }
+    .element p{
+        margin-left: 215px;
+        width: 600px;
+        font-size: 13px;
+    }
+
+    .element img{
+        left: 15px;
+        width: 200px;
+    }
+
+    .button[name="Examples"]{
+        top: 290px
+    }
+    #description {
+        margin-top: 70px;
+        margin-left: 500px;
+    }
+    .gif-with-play img,
+    .play.gif-with-play img{
+        width: 400px;
+        height: 275px;
+    }
+    .logo a{
+        font-size: 100px;
+    }
+}
+@media screen and (max-width: 992px)
+{
+    .mar-top{
+        padding-top: 150px;
+    }
+    #description p[name="Title"]{
+        font-size: 20px;
+    }
+    #catalog img[name="Close"]{
+        margin-right: 60px;
+    }
+    .element p{
+        margin-left: 115px;
+        width: 400px;
+        font-size: 12px;
+    }
+
+    .element img{
+        width: 100px;
+    }
+
+    .button[name="Examples"]{
+        top: 160px;
+    }
+    .gif-with-play img,
+    .play.gif-with-play img{
+        width: 250px;
+        height: 140px;
+    }
+    .navbar-default .navbar-nav>li>a{
+        font-size: 16px;
+    }
+    .part {
+        height: 500px;
+    }
+    #description {
+        margin-left: 390px;
+        margin-top: 60px;
+        font-size: 14px;
+    }
+    .logo a{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width: 767.5px)
+{
+    .mar-top{
+        padding-top: 100px;
+    }
+    .button[name="Examples"]{
+        top: 20px;
+    }
+    .gif-with-play img,
+    .play.gif-with-play img{
+        opacity: 1;
+    }
+    .gif-with-play img,
+    .play.gif-with-play img{
+        margin-top: 50px;     
+        width: 250px;
+        height: 140px;
+    }
+
+    .logo[name="Logo"]{
+        display: block;
+        font-family: 'Marck Script', cursive;
+        font-size: 35px;
+        padding-top: 15px;
+        padding-left: 20px;
+        color: #FFF;
+    }
+    .logo[name="Logo"]:hover{
+        color: #FFF;
+    }
+    .logo[name="Logo"]:focus{
+        color: #FFF;
+    }
+    #description p[name="Title"]
+    {
+        text-align: center;
+        font-size: 18px;
+        text-indent: 0;
+        margin-top: 20px;
+    }
+    .thumb-wrap{
+        margin-top: 220px;
+    }
+    #description {
+        margin-left: 0;
+        width: 490px;
+        margin-top: 0;
+    }
+    .thumb-wrap iframe {
+        width: 90%;
+        height: 80%;
+        left: 47px;
+        margin: 0 auto;
+        top: 0;
+    }
+    .mycon{
+        width:500px;
+    }
+    .navbar-default .navbar-nav>li{
+        width: 100%;
+    }
+    .rows{
+        padding: 0; 
+    }
+    #мain{
+        display: none;
+    }
+    #mainPage{
+        display: none;
+    }
+    .links{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 670px)
+{
+    #catalog img[name="Close"]{
+        margin-top: -10px;
+        margin-right: 35px;
+        width: 30px
+    }
+    .element p[name="Name"]{
+        margin-top: 0;
+        font-size: 18px;
+    }
+    .element p{
+        width: 300px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
 
 #aboutCompany {
     background-image: url(../images/secondPage.png);
@@ -132,7 +490,7 @@ p{
 
 .thumb-wrap {
     position: relative;
-    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    padding-bottom: 56.25%;  задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) 
     padding-top: 30px;
     height: 0;
     overflow: hidden;
@@ -230,14 +588,14 @@ p{
 }
 .button[name="Examples"]{
     z-index: 4;
-    /* position: absolute; */
-    /* margin-top: 20%; */
+     position: absolute; 
+     margin-top: 20%; 
     margin-left: 50%;
     margin-right: 50%;
-    /* left: 50%; */
-    /* margin-right: -50%; */
+     left: 50%; 
+     margin-right: -50%; 
     transform: translate(-50%, -50%);
-    /* display: flex; */
+     display: flex; 
 
 }
 
@@ -321,7 +679,7 @@ p{
     overflow: auto;
 }
 
-/*scrollbar {
+scrollbar {
 width: 25px;
 height: 12px;
 }
@@ -338,3 +696,4 @@ background: #ccc;
 scrollbar-thumb:hover {
 background: #999;  
 }*/
+

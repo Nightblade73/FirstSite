@@ -5,9 +5,13 @@
         <group>
             <file>file:/C:/Apache24/htdocs/index.php</file>
             <file>file:/C:/Apache24/htdocs/javascript/scrolling.js</file>
+            <file>file:/C:/Apache24/htdocs/ValidationController.php</file>
+            <file>file:/C:/Apache24/htdocs/index2.php</file>
+            <file>file:/C:/Apache24/htdocs/css/styles2.css</file>
+            <file>file:/C:/Apache24/htdocs/javascript/showCatalog.js</file>
             <file>file:/C:/Apache24/htdocs/head.php</file>
             <file>file:/C:/Apache24/htdocs/css/styles.css</file>
-            <file>file:/C:/Apache24/htdocs/css/gif.css</file>
+            <file>file:/C:/Apache24/htdocs/DBController.php</file>
         </group>
     </open-files>
 </project-private>
