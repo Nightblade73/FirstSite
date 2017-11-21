@@ -7,7 +7,7 @@ body {
     font-size: 12px; 
     font-weight: normal;
     padding-top: 50px;
-    min-width: 400px;
+    min-width: 455px;
 }
 
 .menu{
@@ -159,6 +159,12 @@ body {
     top: 350px;
 }
 
+.button[name="Search"]{
+    margin-left: 10px;
+    border: 1px solid transparent;
+    border-color: white;
+}
+
 #catalog{
     width: 90%;
     height: 90%;
@@ -173,13 +179,6 @@ body {
     top: 0;
     bottom: 0;
     padding: 16px;
-}
-#catalog img[name="Close"]{
-    margin-right: 100px;
-    right: 0;
-    margin-top: 4px;
-    position: fixed;
-    cursor: pointer;
 }
 .element {
     width: 100%;
@@ -206,18 +205,8 @@ body {
     width: 200px;
     height: auto;
 }
-#wrap {
-    display: none;
-    opacity: 0.8;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 16px;
-    background-color: rgba(1, 1, 1, 0.725);
-    z-index: 100;
-    overflow: auto;
+.form-option{
+        margin: 14 auto;
 }
 .mar-top{
     padding-top: 250px;
@@ -293,8 +282,7 @@ body {
         margin-right: 70px;
     }
     .element p{
-        margin-left: 215px;
-        width: 600px;
+        margin-left: 255px;
         font-size: 13px;
     }
 
@@ -327,12 +315,9 @@ body {
     #description p[name="Title"]{
         font-size: 20px;
     }
-    #catalog img[name="Close"]{
-        margin-right: 60px;
-    }
     .element p{
-        margin-left: 115px;
-        width: 400px;
+        margin-left: 155px;
+        width: 600px;
         font-size: 12px;
     }
 
@@ -365,6 +350,9 @@ body {
 }
 @media screen and (max-width: 767.5px)
 {
+    .element p{
+        width: 500px;
+    }
     .mar-top{
         padding-top: 100px;
     }
